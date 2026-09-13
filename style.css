@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #ffffff;
-    color: #1a1a1a;
+    background-color: #1a1a1a; /* Changes the background to dark grey */
+    color: #ffffff; /* Changes the main text to white */
 }
 
 
@@ -22,7 +22,7 @@ body {
 
 
 .logo img {
-    height: 35px;
+    height: 50px;
     width: auto;
     display: block;
 }
@@ -59,4 +59,112 @@ body {
     font-size: 1.2rem;
     margin-bottom: 20px;
     line-height: 1.6; 
+}
+/* --- Project List View Styles --- */
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between each card */
+}
+
+.project-card {
+    display: flex;
+    background-color: #1e1e1e; /* Dark background from screenshot */
+    color: #e0e0e0;
+    text-decoration: none; /* Removes link underline */
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative; /* Allows precise positioning of the date */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    background-color: #252525;
+}
+
+.project-card img {
+    width: 100px;
+    min-width: 100px; /* Forces the width even if the image is broken */
+    min-height: 150px;
+    object-fit: cover;
+    background-color: #7b61ff;
+}
+
+.project-info {
+    padding: 20px 20px 45px 20px; /* Extra bottom padding for the date */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h2 {
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    border-bottom: none; /* Overrides the previous h2 border if any */
+}
+
+.project-info p {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+    color: #cccccc;
+}
+
+.project-date {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    color: #888888;
+    font-size: 0.85rem;
+}
+
+/* --- Expanded Article View Styles --- */
+.article-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.article-title {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.article-hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-color: #7b61ff;
+}
+
+.article-body p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+/* Optional: If you want the whole background dark like the screenshot */
+body.dark-mode {
+    background-color: #121212;
 }
