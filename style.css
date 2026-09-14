@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #1a1a1a; /* Changes the background to dark grey */
-    color: #ffffff; /* Changes the main text to white */
+    background-color: #1a1a1a; 
+    color: #ffffff;
 }
 
 
@@ -60,7 +60,6 @@ body {
     margin-bottom: 20px;
     line-height: 1.6; 
 }
-/* --- Project List View Styles --- */
 .page-title {
     font-size: 2rem;
     margin-bottom: 20px;
@@ -69,17 +68,17 @@ body {
 .project-list {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between each card */
+    gap: 20px;
 }
 
 .project-card {
     display: flex;
-    background-color: #1e1e1e; /* Dark background from screenshot */
+    background-color: #1e1e1e;
     color: #e0e0e0;
-    text-decoration: none; /* Removes link underline */
+    text-decoration: none;
     border-radius: 6px;
     overflow: hidden;
-    position: relative; /* Allows precise positioning of the date */
+    position: relative;
     transition: transform 0.2s, background-color 0.2s;
 }
 
@@ -90,14 +89,14 @@ body {
 
 .project-card img {
     width: 100px;
-    min-width: 100px; /* Forces the width even if the image is broken */
+    min-width: 100px;
     min-height: 150px;
     object-fit: cover;
     background-color: #7b61ff;
 }
 
 .project-info {
-    padding: 20px 20px 45px 20px; /* Extra bottom padding for the date */
+    padding: 20px 20px 45px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -106,7 +105,7 @@ body {
     color: #ffffff;
     margin: 0 0 10px 0;
     font-size: 1.4rem;
-    border-bottom: none; /* Overrides the previous h2 border if any */
+    border-bottom: none; 
 }
 
 .project-info p {
@@ -124,7 +123,6 @@ body {
     font-size: 0.85rem;
 }
 
-/* --- Expanded Article View Styles --- */
 .article-container {
     max-width: 900px;
     margin: 40px auto;
@@ -164,7 +162,7 @@ body {
     color: #cccccc;
 }
 
-/* Optional: If you want the whole background dark like the screenshot */
+
 body.dark-mode {
     background-color: #121212;
 }
