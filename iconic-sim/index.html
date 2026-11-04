@@ -368,7 +368,7 @@ document.querySelectorAll("button[data-c]").forEach(b => b.onclick = () => {
 document.getElementById("devloop").onchange = e => send({ t: "devloop", loop: Number(e.target.value) });
 document.getElementById("sound").onchange = e => { send({ t: "sound", on: e.target.checked }); if (!e.target.checked) setBuzz(false); else if (wantBuzz) setBuzz(true); };
 
-// ---------------------------------------------------------------- pointer & keys
+// ---------------------------------------------------------------- pointer & keys-
 function toPanel(e) {
   const r = cv.getBoundingClientRect();
   return { x: (e.clientX - r.left) * W / r.width, y: (e.clientY - r.top) * H / r.height };
