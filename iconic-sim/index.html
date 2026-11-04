@@ -4,14 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GENT Iconic Web</title>
+<link rel="icon" type="image/png" href="/znte-favicon.png">
+<link rel="stylesheet" href="/style.css">   <!-- znte.co.uk site styles: navbar, fonts -->
 <style>
   :root {
-    --bg: #101214; --panel: #1b1d20; --edge: #2c2f33; --text: #e6e8ea; --muted: #9aa3ad;
+    --bg: #1a1a1a; --panel: #1b1d20; --edge: #2c2f33; --text: #e6e8ea; --muted: #9aa3ad;
     --accent: #0aa1d8; --warn: #ffb300; --fire: #e2483a;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--text);
-    font: 14px/1.4 Tahoma, "Segoe UI", Verdana, sans-serif; }
+    font: 14px/1.4 "Segoe UI", Tahoma, Verdana, sans-serif; }
+  .navbar .logo img { display: block; }
   .wrap { display: flex; gap: 16px; padding: 16px; align-items: flex-start; justify-content: center; flex-wrap: wrap; }
   .stage { position: relative; flex: 1 1 640px; max-width: 987px; }
   canvas#panel { width: 100%; height: auto; display: block; touch-action: none; border-radius: 6px;
@@ -53,6 +56,11 @@
 </style>
 </head>
 <body>
+<nav class="navbar">
+  <div class="logo">
+    <a href="/"><img src="/znte.png" alt="znte logo"></a>
+  </div>
+</nav>
 <div class="wrap">
   <div class="stage">
     <canvas id="panel" width="987" height="843" aria-label="GENT Iconic control panel"></canvas>
@@ -102,7 +110,7 @@
 "use strict";
 // Where the simulator server is.  Leave "" when this page is served by the server itself;
 // on GitHub Pages put the server address here, e.g. "wss://gent-iconic.onrender.com/ws".
-const SERVER = "";
+const SERVER = "wss://gent-iconic.onrender.com/ws";
 
 const cv = document.getElementById("panel");
 const ctx = cv.getContext("2d");
